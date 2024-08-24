@@ -1,4 +1,4 @@
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { IconArrowRight, IconBallFootball, IconUsers, IconGift, IconAward, IconBrandHipchat, IconNotebook, IconBrandInstagram } from '@tabler/icons-react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
@@ -30,7 +30,7 @@ function App() {
       daftar: 'https://forms.gle/NKTxSLMPyfo8Yxp19',
       daftar2: 'https://forms.gle/A2sDKQekQ2giBfAr6',
       poster: biepc,
-      price:"FREE"
+      price: 'FREE'
     },
     {
       nama: 'Lomba DEBAT SMA Provinsi Lampung',
@@ -38,18 +38,18 @@ function App() {
       guidebook: 'https://bit.ly/BookletDebatSMA',
       daftar: 'https://forms.gle/rDotF5HEanXFNHp86',
       poster: debat,
-      price:"Rp100.000"
+      price: 'Rp100.000'
     },
     {
-      nama: 'FUTSAL (Teknik Biomedis ITERA)',
+      nama: 'Lomba FUTSAL (Teknik Biomedis ITERA)',
       icon: <IconBallFootball className="w-10 h-10 text-white" />,
       guidebook: 'https://bit.ly/BookletdanTataTertibBMExHMBM2024',
       daftar: 'https://bit.ly/RegistrasiFutsalBMExHMBM2024',
       poster: futsal,
-      price:"Rp250.000"
+      price: 'Rp250.000'
     },
     {
-      nama: 'BADMINTON (Teknik Biomedis ITERA)',
+      nama: 'Lomba BADMINTON (Teknik Biomedis ITERA)',
       icon: (
         <svg className="w-10 h-10 text-white" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
           <path fill="currentColor" d="M12.3 2c-.97.03-1.72.84-1.69 1.8c.01.24.06.47.16.7l.29.64c.04.13-.03.27-.17.31c-.09.05-.19 0-.26-.08l-.42-.55c-.33-.42-.83-.68-1.36-.69c-.97-.02-1.77.75-1.79 1.71c-.01.42.13.82.39 1.16l.42.5h.01c.08.13.05.29-.06.37c-.09.07-.21.07-.29 0L7 7.45c-.34-.26-.75-.4-1.16-.39c-.96.02-1.73.82-1.71 1.79c.01.53.27 1.03.69 1.36l.57.44c.11.1.11.26-.01.35a.23.23 0 0 1-.26.05h-.01l-.61-.28c-.23-.09-.46-.15-.7-.16c-.96-.03-1.77.73-1.8 1.7c0 .72.4 1.38 1.06 1.66l11.39 5.07l4.59-4.59l-5.07-11.39C13.69 2.39 13 1.97 12.3 2m.83 4.1c.42-.01.8.23.96.61l3.05 6.84l-3.95-3.94l-.93-2.11c-.3-.63.16-1.38.87-1.4M9.85 8.85c.27 0 .52.1.71.3l4.81 4.81c.4.38.41 1.01.03 1.41c-.4.4-1.02.41-1.44 0l-4.81-4.81a.987.987 0 0 1-.02-1.41c.19-.2.45-.3.72-.3m-2.72 3.32c.13 0 .27.04.37.09l2.13.94l3.94 3.94l-6.86-3.05c-1.02-.44-.68-1.95.42-1.92m13.15 3.87l-4.24 4.24l.85.85c.76.75 1.86 1.04 2.89.77a3.02 3.02 0 0 0 2.12-2.12c.27-1.03-.02-2.13-.77-2.89z" />
@@ -58,7 +58,7 @@ function App() {
       guidebook: 'https://bit.ly/BookletdanTataTertibBMExHMBM2024',
       daftar: 'https://bit.ly/RegistrasiBadmintonBMExHMBM2024',
       poster: badminton,
-      price:"Rp300.000"
+      price: 'Rp300.000'
     }
   ];
   useEffect(() => {
@@ -128,11 +128,15 @@ function App() {
             </h1>
             <h1 className="text-lg md:text-2xl font-serif font-medium">Institut Teknologi Sumatera</h1>
             <div className="flex gap-2 mt-3">
-              <a href="#about" className="bg-[#9A0000] px-5 py-2 rounded font-medium rounded-full text-white">About Us</a>
-              <a href="#lomba" className="bg-[#9A0000] px-5 py-2 rounded font-medium rounded-full text-white">Daftar Lomba</a>
+              <a href="#about" className="bg-[#9A0000] px-5 py-2 rounded font-medium rounded-full text-white">
+                About Us
+              </a>
+              <a href="#lomba" className="bg-[#9A0000] px-5 py-2 rounded font-medium rounded-full text-white">
+                Daftar Lomba
+              </a>
             </div>
           </div>
-          <img src={logo} className="w-32 md:w-72 order-first md:order-last animate-pulse" alt="BMExHMBM Logo" data-aos="fade-left"/>
+          <img src={logo} className="w-32 md:w-72 order-first md:order-last animate-pulse" alt="BMExHMBM Logo" data-aos="fade-left" />
         </div>
       </div>
 
@@ -175,11 +179,11 @@ function App() {
                 </div>
                 {/*<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed commodo est, sed facilisis lacus.</p>*/}
                 <div className="flex flex-wrap gap-2 my-5">
-                  <a href={lomba.guidebook} className="px-4 py-2 bg-[#9A0000] text-white border border-[#9A0000] hover:bg-transparent hover:border hover:border-[#9A0000] hover:text-[#9A0000] rounded-full transition">
+                  <a href={lomba.guidebook} className="px-4 py-2 text-[#9A0000] border border-[#9A0000] hover:bg-transparent hover:border hover:border-[#9A0000] hover:text-[#9A0000] rounded-full transition">
                     GuideBook
                   </a>
                   <a href={lomba.daftar} className="px-4 py-2 bg-[#9A0000] text-white border border-[#9A0000] hover:bg-transparent hover:border hover:border-[#9A0000] hover:text-[#9A0000] rounded-full transition">
-                    Daftar
+                    Daftar Lomba
                   </a>
                   {lomba.daftar2 ? (
                     <a href={lomba.daftar2} className="px-4 py-2 bg-[#9A0000] text-white border border-[#9A0000] hover:bg-transparent hover:border hover:border-[#9A0000] hover:text-[#9A0000] rounded-full transition">
@@ -201,10 +205,11 @@ function App() {
           ))}
         </div>
       </div>
-
       <div className="flex flex-col items-center justify-center gap-5" id="timeline" data-aos="fade-up">
+        <img src={maskot} className="w-72 absolute left-10 -rotate-12 hidden md:block" alt="BMExHMBM Maskot" />
         <h1 className="text-3xl font-bold font-serif text-black my-10">Timeline</h1>
         <img src={timelineImage} className="rounded shadow-xl w-72 md:w-fit" />
+        <img src={maskot} className="w-72 absolute top-5 right-10 rotate-12 hidden md:block" alt="BMExHMBM Maskot" />
       </div>
 
       <div className="h-screen flex flex-col items-center justify-center" id="faq" data-aos="fade-up">
@@ -224,6 +229,7 @@ function App() {
             </div>
           ))}
         </div>
+        <img src={maskot} className="w-72 absolute top-5 right-10 rotate-12 hidden md:block" alt="BMExHMBM Maskot" />
       </div>
 
       <div className="h-screen flex flex-col items-center justify-center" data-aos="fade-up">
@@ -237,7 +243,11 @@ function App() {
         </div>
       </div>
 
-      <div className="bg-[#9A0000] p-16 flex flex-col md:flex-row items-center md:items-start justify-between gap-5">
+      {/*<img src={maskot} className="w-72 translate-x-[50%] hidden md:block" alt="BMExHMBM Maskot" />*/}
+      <div className="relative w-full h-full z-[-1]">
+        <img src={maskot} alt="Centered Image" className="absolute inset-0 m-auto w-80" />
+      </div>
+      <div className="bg-[#9A0000] p-16 flex flex-col md:flex-row items-center md:items-start justify-between gap-5 z-50">
         <div className="flex flex-col justify-center md:justify-start items-center md:items-start text-center md:text-left md:w-4/12">
           <div className="flex md:flex-row flex-col justify-center items-center md:-translate-x-5">
             <img src={logo} className="w-24" alt="BMExHMBM Logo" />
@@ -249,7 +259,10 @@ function App() {
           </div>
           <p className="text-white opacity-80 mt-3">Institut Teknologi Sumatera, Jalan Terusan Ryacudu, Desa Way Hui, Kecamatan Jatiagung, Lampung Selatan 35365</p>
           <div className="flex flex-col mt-3 gap-3 text-white">
-            <a href="https://www.instagram.com/diesnatalis.bme/" className="flex gap-2"> <IconBrandInstagram /> @diesnatalis.bme</a>
+            <a href="https://www.instagram.com/diesnatalis.bme/" className="flex gap-2">
+              {' '}
+              <IconBrandInstagram /> @diesnatalis.bme
+            </a>
           </div>
         </div>
 
