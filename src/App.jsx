@@ -33,7 +33,7 @@ function App() {
       price: 'FREE'
     },
     {
-      nama: 'Lomba DEBAT SMA Provinsi Lampung',
+      nama: 'High School Debate Competition - Lampung Province',
       icon: <IconBrandHipchat className="w-10 h-10 text-white" />,
       guidebook: 'https://bit.ly/BookletDebatSMA',
       daftar: 'https://forms.gle/rDotF5HEanXFNHp86',
@@ -41,7 +41,7 @@ function App() {
       price: 'Rp100.000'
     },
     {
-      nama: 'Lomba FUTSAL (Teknik Biomedis ITERA)',
+      nama: 'Futsal Competition (Biomedical Engineering ITERA)',
       icon: <IconBallFootball className="w-10 h-10 text-white" />,
       guidebook: 'https://bit.ly/BookletdanTataTertibBMExHMBM2024',
       daftar: 'https://bit.ly/RegistrasiFutsalBMExHMBM2024',
@@ -49,7 +49,7 @@ function App() {
       price: 'Rp250.000'
     },
     {
-      nama: 'Lomba BADMINTON (Teknik Biomedis ITERA)',
+      nama: 'Badminton Competition (Biomedical Engineering ITERA)',
       icon: (
         <svg className="w-10 h-10 text-white" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
           <path fill="currentColor" d="M12.3 2c-.97.03-1.72.84-1.69 1.8c.01.24.06.47.16.7l.29.64c.04.13-.03.27-.17.31c-.09.05-.19 0-.26-.08l-.42-.55c-.33-.42-.83-.68-1.36-.69c-.97-.02-1.77.75-1.79 1.71c-.01.42.13.82.39 1.16l.42.5h.01c.08.13.05.29-.06.37c-.09.07-.21.07-.29 0L7 7.45c-.34-.26-.75-.4-1.16-.39c-.96.02-1.73.82-1.71 1.79c.01.53.27 1.03.69 1.36l.57.44c.11.1.11.26-.01.35a.23.23 0 0 1-.26.05h-.01l-.61-.28c-.23-.09-.46-.15-.7-.16c-.96-.03-1.77.73-1.8 1.7c0 .72.4 1.38 1.06 1.66l11.39 5.07l4.59-4.59l-5.07-11.39C13.69 2.39 13 1.97 12.3 2m.83 4.1c.42-.01.8.23.96.61l3.05 6.84l-3.95-3.94l-.93-2.11c-.3-.63.16-1.38.87-1.4M9.85 8.85c.27 0 .52.1.71.3l4.81 4.81c.4.38.41 1.01.03 1.41c-.4.4-1.02.41-1.44 0l-4.81-4.81a.987.987 0 0 1-.02-1.41c.19-.2.45-.3.72-.3m-2.72 3.32c.13 0 .27.04.37.09l2.13.94l3.94 3.94l-6.86-3.05c-1.02-.44-.68-1.95.42-1.92m13.15 3.87l-4.24 4.24l.85.85c.76.75 1.86 1.04 2.89.77a3.02 3.02 0 0 0 2.12-2.12c.27-1.03-.02-2.13-.77-2.89z" />
@@ -61,6 +61,7 @@ function App() {
       price: 'Rp300.000'
     }
   ];
+
   useEffect(() => {
     AOS.init();
   }, []);
@@ -113,16 +114,16 @@ function App() {
           </a>
         </div>
         <a href="#lomba" className="bg-[#9A0000] text-white px-5 py-2 rounded-full font-medium flex gap-2">
-          Daftar Lomba <IconArrowRight />
+          Competition <IconArrowRight />
         </a>
       </nav>
 
       <div className="h-screen bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-yellow-500 via-red-600 to-yellow-200 flex flex-col gap-10 justify-center items-center">
         <div className="flex flex-col md:flex-row items-center gap-10">
           <div className="text-white space-y-6 text-center md:text-left flex flex-col justify-center items-center md:justify-start md:items-start" data-aos="fade-right">
-            <p>Selamat Datang</p>
+            <p>Welcome!</p>
             <h1 className="text-3xl md:text-6xl font-serif font-bold">
-              Lomba Dies Natalis
+              Anniversary Competition of
               <br />
               BME × HMBM 2024
             </h1>
@@ -132,7 +133,7 @@ function App() {
                 About Us
               </a>
               <a href="#lomba" className="bg-[#9A0000] px-5 py-2 rounded font-medium rounded-full text-white">
-                Daftar Lomba
+                Competition
               </a>
             </div>
           </div>
@@ -141,8 +142,8 @@ function App() {
       </div>
 
       <div className="md:h-screen flex flex-col items-center justify-center gap-5 mx-6 my-6" id="about" data-aos="fade-up">
-        <h1 className="text-3xl font-bold font-serif">Tentang Kami</h1>
-        <p className="m-4 md:w-6/12 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed commodo est, sed facilisis lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla eget vestibulum quam. Praesent a ante quis odio lobortis blandit. Mauris sit amet sagittis massa, eu tincidunt turpis. Nam gravida elit quis viverra mollis. Donec urna neque, accumsan at euismod eget, ultrices quis sapien. Sed mauris purus, tincidunt non dignissim ac, tincidunt vitae massa.</p>
+        <h1 className="text-3xl font-bold font-serif">About Event</h1>
+        <p className="m-4 md:w-6/12 text-center">The BME x HMBM ITERA 2024 anniversary is an important moment to celebrate history and achievements of the Chetikrahayu Itera Biomedical Engineering and HMBM Study Program since its founding. It's also an opportunity to reflect on the journey development of study programs and building a spirit of togetherness among members academic community. Anniversary celebrations can be a source of inspiration for students, lecturers and staff in their academic and professional journey. Through the events held, we can share success stories, experiences and a view of the future that can motivate the next generation to achieve achievements higher</p>
         <div className="flex flex-col md:flex-row gap-2">
           {[
             <span key="pendaftar" className="hover:rotate-3 transition flex gap-3 justify-center items-center">
@@ -166,7 +167,7 @@ function App() {
       </div>
 
       <div className="flex flex-col items-center justify-center bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-red-900 via-red-600 to-red-700 mt-10" id="lomba">
-        <h1 className="text-3xl font-bold font-serif text-white text-center my-10">Daftar Lomba</h1>
+        <h1 className="text-3xl font-bold font-serif text-white text-center my-10">Competition</h1>
         <div className="flex flex-col md:flex-row gap-5 m-6" data-aos="fade-up">
           {items.map((lomba, index) => (
             <div key={index} className="bg-white border border-red-300 p-5 rounded hover:shadow transition-all hover:scale-105 flex flex-col justify-between">
@@ -174,7 +175,7 @@ function App() {
               <div>
                 <h1 className="text-3xl font-bold my-5">{lomba.nama}</h1>
                 <div className="px-4 py-2 bg-green-200 rounded">
-                  <p className="text-sm">Biaya Pendaftaran</p>
+                  <p className="text-sm">Register Price</p>
                   <h1 className="text-2xl font-semibold text-green-600">{lomba.price}</h1>
                 </div>
                 {/*<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed commodo est, sed facilisis lacus.</p>*/}
@@ -183,11 +184,11 @@ function App() {
                     GuideBook
                   </a>
                   <a href={lomba.daftar} className="px-4 py-2 bg-[#9A0000] text-white border border-[#9A0000] hover:bg-transparent hover:border hover:border-[#9A0000] hover:text-[#9A0000] rounded-full transition">
-                    Daftar Lomba
+                    Register
                   </a>
                   {lomba.daftar2 ? (
                     <a href={lomba.daftar2} className="px-4 py-2 bg-[#9A0000] text-white border border-[#9A0000] hover:bg-transparent hover:border hover:border-[#9A0000] hover:text-[#9A0000] rounded-full transition">
-                      Daftar Short Essay
+                      Short Essay
                     </a>
                   ) : (
                     <></>
@@ -213,7 +214,7 @@ function App() {
       </div>
 
       <div className="h-screen flex flex-col items-center justify-center" id="faq" data-aos="fade-up">
-        <h1 className="text-3xl font-bold font-serif text-black my-10">Pertanyaan Umum</h1>
+        <h1 className="text-3xl font-bold font-serif text-black my-10">Frequently Asked Question</h1>
         <div className="max-w-md mx-auto space-y-3 w-full">
           {faqs.map((faq, index) => (
             <div key={index} className="bg-[#9A0000] rounded m-5">
