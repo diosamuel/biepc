@@ -13,6 +13,28 @@ import biepc from './assets/biepc.jpg';
 import futsal from './assets/futsal.jpg';
 import badminton from './assets/badminton.jpg';
 
+//medpart
+import acara_mahasiswa from './assets/Logo Medpart/Eksternal/@acara.mahasiswa.png';
+import aradio_official from './assets/Logo Medpart/Eksternal/@aradio_official.png';
+import edaranevent from './assets/Logo Medpart/Eksternal/@edaranevent.png';
+import eventkampus_id from './assets/Logo Medpart/Eksternal/@eventkampus_id.png';
+import eventmahasiswa8 from './assets/Logo Medpart/Eksternal/@eventmahasiswa8.png';
+import events_ina from './assets/Logo Medpart/Eksternal/@events.ina.jpg';
+import ruanganevent from './assets/Logo Medpart/Eksternal/@ruanganevent.jpg';
+import teras_event from './assets/Logo Medpart/Eksternal/@teras.event.png';
+import urbanjabar from './assets/Logo Medpart/Eksternal/@urbanjabar.jpg';
+import webinarcenter_id from './assets/Logo Medpart/Eksternal/@webinarcenter.id.png';
+import logo_lampung_geh_v2 from './assets/Logo Medpart/Eksternal/Logo Lampung Geh v2.png';
+//internal
+import HMMT_Material_PJ_zia from './assets/Logo Medpart/Internal/HMMT (Material)PJ zia.jpg';
+import Himafi_Fisika_PJ_Najla from './assets/Logo Medpart/Internal/Himafi (Fisika) PJ Najla.jpg';
+import Himakos_Rekayasa_kosmetik_PJ_Angela from './assets/Logo Medpart/Internal/Himakos (Rekayasa kosmetik)PJ Angela.jpg';
+import HME_Elektro_PJ_Aura from './assets/Logo Medpart/Internal/HME(Elektro)Pj Aura.png';
+import HMIA_Instrumen_automasi_PJ_angela from './assets/Logo Medpart/Internal/HMIA(Instrumen automasi) PJ angela.png';
+import HMK_Kimia_PJ_aliyah from './assets/Logo Medpart/Internal/HMK(Kimia)PJ aliyah_.png';
+import Humas_ITERA_Logo from './assets/Logo Medpart/Internal/Humas ITERA Logo.png';
+import PNG_logo_Himarskap from './assets/Logo Medpart/Internal/PNG logo Himarskap.png';
+
 function App() {
   const cardFront = 'Welcome to GFG.';
   const cardBack = 'Computer Science Portal.';
@@ -214,7 +236,7 @@ function App() {
       </div>
 
       <div className="h-screen flex flex-col items-center justify-center" id="faq" data-aos="fade-up">
-        <h1 className="text-3xl font-bold font-serif text-black my-10">Frequently Asked Question</h1>
+        <h1 className="text-3xl font-bold font-serif text-black my-10 text-center">Frequently Asked Question</h1>
         <div className="max-w-md mx-auto space-y-3 w-full">
           {faqs.map((faq, index) => (
             <div key={index} className="bg-[#9A0000] rounded m-5">
@@ -236,11 +258,17 @@ function App() {
       <div className="h-screen flex flex-col items-center justify-center" data-aos="fade-up">
         <h1 className="text-3xl font-bold font-serif text-black text-center mb-10">Media Partner & Partnership</h1>
         <div className="flex flex-wrap items-center justify-center gap-5 m-5">
-          <img src="https://invention-udayana.com/assets/media-partner/event-alerts-logo.jpg" className="w-20 md:w-32" alt="Media Partner Logo" />
-          <img src="https://invention-udayana.com/assets/media-partner/event-alerts-logo.jpg" className="w-20 md:w-32" alt="Media Partner Logo" />
-          <img src="https://invention-udayana.com/assets/media-partner/event-alerts-logo.jpg" className="w-20 md:w-32" alt="Media Partner Logo" />
-          <img src="https://invention-udayana.com/assets/media-partner/event-alerts-logo.jpg" className="w-20 md:w-32" alt="Media Partner Logo" />
-          <img src="https://invention-udayana.com/assets/media-partner/event-alerts-logo.jpg" className="w-20 md:w-32" alt="Media Partner Logo" />
+          <img src={acara_mahasiswa} className="w-20 md:w-32" alt="acara mahasiswa" />
+          <img src={aradio_official} className="w-20 md:w-32" alt="aradio official" />
+          <img src={edaranevent} className="w-20 md:w-32" alt="edaranevent" />
+          <img src={eventkampus_id} className="w-20 md:w-32" alt="eventkampus id" />
+          <img src={eventmahasiswa8} className="w-20 md:w-32" alt="event mahasiswa8" />
+          <img src={events_ina} className="w-20 md:w-32" alt="events ina" />
+          <img src={ruanganevent} className="w-20 md:w-32" alt="ruanganevent" />
+          <img src={teras_event} className="w-20 md:w-32" alt="teras event" />
+          <img src={urbanjabar} className="w-20 md:w-32" alt="urbanjabar" />
+          <img src={webinarcenter_id} className="w-20 md:w-32" alt="webinarcenter id" />
+          <img src={logo_lampung_geh_v2} className="w-20 md:w-32" alt="Logo Lampung Geh v2" />
         </div>
       </div>
 
