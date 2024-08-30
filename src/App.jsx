@@ -24,7 +24,16 @@ import ruanganevent from './assets/Logo Medpart/Eksternal/@ruanganevent.jpg';
 import teras_event from './assets/Logo Medpart/Eksternal/@teras.event.png';
 import urbanjabar from './assets/Logo Medpart/Eksternal/@urbanjabar.jpg';
 import webinarcenter_id from './assets/Logo Medpart/Eksternal/@webinarcenter.id.png';
+import event_network_2 from './assets/Logo Medpart/Eksternal/Event Network 2.png';
+import ikutevent from './assets/Logo Medpart/Eksternal/ikutevent.png';
+import infoevent from './assets/Logo Medpart/Eksternal/infoevent.png';
 import logo_lampung_geh_v2 from './assets/Logo Medpart/Eksternal/Logo Lampung Geh v2.png';
+import logo_okediil_service from './assets/Logo Medpart/Eksternal/Logo Okediil Service.png';
+import logo_slanik from './assets/Logo Medpart/Eksternal/logo slanik.jpg';
+import partnerevent from './assets/Logo Medpart/Eksternal/partnerevent.png';
+import sariroti from './assets/Logo Medpart/Eksternal/sariroti.png';
+import seminarcenter from './assets/Logo Medpart/Eksternal/seminarcenter.png';
+
 //internal
 import HMMT_Material_PJ_zia from './assets/Logo Medpart/Internal/HMMT (Material)PJ zia.jpg';
 import Himafi_Fisika_PJ_Najla from './assets/Logo Medpart/Internal/Himafi (Fisika) PJ Najla.jpg';
@@ -256,7 +265,7 @@ function App() {
       </div>
 
       <div className="h-screen flex flex-col items-center justify-center" data-aos="fade-up">
-        <h1 className="text-3xl font-bold font-serif text-black text-center mb-10">Media Partner & Partnership</h1>
+        <h1 className="text-3xl font-bold font-serif text-black text-center mb-10">Media Partner & Sponsorship</h1>
         <div className="flex flex-wrap items-center justify-center gap-5 m-5">
           <img src={acara_mahasiswa} className="w-20 md:w-32" alt="acara mahasiswa" />
           <img src={aradio_official} className="w-20 md:w-32" alt="aradio official" />
@@ -268,7 +277,15 @@ function App() {
           <img src={teras_event} className="w-20 md:w-32" alt="teras event" />
           <img src={urbanjabar} className="w-20 md:w-32" alt="urbanjabar" />
           <img src={webinarcenter_id} className="w-20 md:w-32" alt="webinarcenter id" />
+          <img src={event_network_2} className="w-20 md:w-32" alt="Event Network 2" />
+          <img src={ikutevent} className="w-20 md:w-32" alt="ikutevent" />
+          <img src={infoevent} className="w-20 md:w-32" alt="infoevent" />
           <img src={logo_lampung_geh_v2} className="w-20 md:w-32" alt="Logo Lampung Geh v2" />
+          <img src={logo_okediil_service} className="w-20 md:w-32" alt="Logo Okediil Service" />
+          <img src={logo_slanik} className="w-20 md:w-32" alt="logo slanik" />
+          <img src={partnerevent} className="w-20 md:w-32" alt="partnerevent" />
+          <img src={sariroti} className="w-20 md:w-32" alt="sariroti" />
+          <img src={seminarcenter} className="w-20 md:w-32" alt="seminarcenter" />
         </div>
       </div>
 
