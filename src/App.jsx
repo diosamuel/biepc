@@ -69,7 +69,7 @@ function App() {
       guidebook: 'https://bit.ly/BookletDebatSMA',
       daftar: 'https://forms.gle/rDotF5HEanXFNHp86',
       poster: debat,
-      price: 'Rp100.000'
+      price: 'Rp100.000/Team'
     },
     {
       nama: 'Futsal Competition (Biomedical Engineering ITERA)',
@@ -77,7 +77,7 @@ function App() {
       guidebook: 'https://bit.ly/BookletdanTataTertibBMExHMBM2024',
       daftar: 'https://bit.ly/RegistrasiFutsalBMExHMBM2024',
       poster: futsal,
-      price: 'Rp250.000'
+      price: 'Rp250.000/Team'
     },
     {
       nama: 'Badminton Competition (Biomedical Engineering ITERA)',
@@ -89,7 +89,7 @@ function App() {
       guidebook: 'https://bit.ly/BookletdanTataTertibBMExHMBM2024',
       daftar: 'https://bit.ly/RegistrasiBadmintonBMExHMBM2024',
       poster: badminton,
-      price: 'Rp300.000'
+      price: 'Rp300.000/Team'
     }
   ];
 
@@ -104,18 +104,39 @@ function App() {
 
   const faqs = [
     {
-      question: 'Lorem ipsum dolor sit amet?',
-      answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed commodo est, sed facilisis lacus.'
+      question: 'Apa saja jenis lomba yang diselenggarakan?',
+      answer: 'Dalam dies natalis Teknik Biomedis x HMBM ini diadakan 2 lomba eksternal yaitu, lomba debat tingkat SMA se-Provinsi BDL dan BIEPC (Biomedical Engineering Innovation Project Competition) tingkat internasional.'
     },
     {
-      question: 'Lorem ipsum dolor sit amet?',
-      answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed commodo est, sed facilisis lacus.'
+      question: 'Siapa saja yang bisa mengikuti lomba ini?',
+      answer: 'Lomba debat: Pelajar SMA/SMK/MA setingkat. Lomba BIEPC: Mahasiswa D3 dan S1 di Indonesia atau luar negeri (mencantumkan kartu identitas mahasiswa).'
     },
     {
-      question: 'Lorem ipsum dolor sit amet?',
-      answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed commodo est, sed facilisis lacus.'
+      question: 'Bagaimana cara mendaftar lomba?',
+      answer: 'Kamu bisa memiilih dari salah satu <a href="#lomba">diatas</a>'
+    },
+    {
+      question: 'Apakah ada biaya pendaftaran?',
+      answer: 'Untuk pendaftaran lomba BIEPC tidak dikenakan biaya apapun. Namun, untuk lomba debat dikenakan biaya 100 ribu per tim.'
+    },
+    {
+      question: 'Kapan dan dimana lombanya akan berlangsung?',
+      answer: 'BIEPC: Karya-karya yang lolos ke babak final akan melakukan presentasi secara online pada tanggal 5 Oktober 2024. Debat: Babak penyisihan berlangsung pada 22 September 2024, dan babak semifinal serta final pada 23 September 2024.'
+    },
+    {
+      question: 'Apa saja persyaratan lomba?',
+      answer: 'Persyaratan lomba dapat dilihat melalui link guide book atau barcode yang tersedia.'
+    },
+    {
+      question: 'Bagaimana mendapatkan informasi terbaru dari event ini?',
+      answer: 'Informasi terbaru akan terus diupdate melalui Instagram kami <IconBrandInstagram /> @diesnatalis.bme'
+    },
+    {
+      question: 'Contact Person',
+      answer: 'Informasi terbaru akan terus diupdate melalui Instagram kami <IconBrandInstagram /> @diesnatalis.bme'
     }
   ];
+
   return (
     <div>
       <nav className="flex justify-between items-center fixed p-5 bg-white w-full shadow gap-5 z-10 backdrop-blur">
@@ -132,7 +153,7 @@ function App() {
             Home
           </a>
           <a href="#about" className="text-base">
-            About
+            About Event
           </a>
           <a href="#lomba" className="text-base">
             Competition
@@ -174,8 +195,8 @@ function App() {
 
       <div className="md:h-screen flex flex-col items-center justify-center gap-5 mx-6 my-6" id="about" data-aos="fade-up">
         <h1 className="text-3xl font-bold font-serif">About Event</h1>
-        <p className="m-4 md:w-6/12 text-center">The BME x HMBM ITERA 2024 anniversary is an important moment to celebrate history and achievements of the Chetikrahayu Itera Biomedical Engineering and HMBM Study Program since its founding. It's also an opportunity to reflect on the journey development of study programs and building a spirit of togetherness among members academic community. Anniversary celebrations can be a source of inspiration for students, lecturers and staff in their academic and professional journey. Through the events held, we can share success stories, experiences and a view of the future that can motivate the next generation to achieve achievements higher</p>
-        <div className="flex flex-col md:flex-row gap-2">
+        <p className="m-4 text-xl md:w-6/12 text-center">The BME x HMBM ITERA 2024 anniversary is an important moment to celebrate history and achievements of the Chetikrahayu Itera Biomedical Engineering and HMBM Study Program since its founding. It's also an opportunity to reflect on the journey development of study programs and building a spirit of togetherness among members academic community. Anniversary celebrations can be a source of inspiration for students, lecturers and staff in their academic and professional journey. Through the events held, we can share success stories, experiences and a view of the future that can motivate the next generation to achieve achievements higher</p>
+        {/*        <div className="flex flex-col md:flex-row gap-2">
           {[
             <span key="pendaftar" className="hover:rotate-3 transition flex gap-3 justify-center items-center">
               <IconUsers /> 100+ Pendaftar
@@ -192,34 +213,39 @@ function App() {
               {text}
             </div>
           ))}
-        </div>
+        </div>*/}
         <img src={maskot} className="w-72 md:absolute right-0 order-first" alt="BMExHMBM Maskot" />
         <img src={maskot} className="w-72 absolute left-0 hidden md:block" alt="BMExHMBM Maskot" />
       </div>
 
       <div className="flex flex-col items-center justify-center bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-red-900 via-red-600 to-red-700 mt-10" id="lomba">
-        <h1 className="text-3xl font-bold font-serif text-white text-center my-10">Competition</h1>
+        <h1 className="text-3xl md:text-4xl font-bold font-serif text-white text-center my-10">Competition</h1>
         <div className="flex flex-col md:flex-row gap-5 m-6" data-aos="fade-up">
           {items.map((lomba, index) => (
             <div key={index} className="bg-white border border-red-300 p-5 rounded hover:shadow transition-all hover:scale-105 flex flex-col justify-between">
               <div className="p-2 rounded-full bg-[#9A0000] w-fit">{lomba.icon}</div>
               <div>
                 <h1 className="text-3xl font-bold my-5">{lomba.nama}</h1>
-                <div className="px-4 py-2 bg-green-200 rounded">
+                <div className="px-4 py-2 bg-yellow-200 rounded">
                   <p className="text-sm">Register Price</p>
-                  <h1 className="text-2xl font-semibold text-green-600">{lomba.price}</h1>
+                  <h1 className="text-2xl font-semibold text-orange-600">{lomba.price}</h1>
                 </div>
                 {/*<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed commodo est, sed facilisis lacus.</p>*/}
                 <div className="flex flex-wrap gap-2 my-5">
-                  <a href={lomba.guidebook} className="px-4 py-2 text-[#9A0000] border border-[#9A0000] hover:bg-transparent hover:border hover:border-[#9A0000] hover:text-[#9A0000] rounded-full transition">
+                  <a href={lomba.guidebook} className="flex-1 px-4 py-2 text-[#9A0000] border border-[#9A0000] hover:bg-transparent hover:border hover:border-[#9A0000] hover:text-[#9A0000] rounded-full transition">
                     GuideBook
                   </a>
-                  <a href={lomba.daftar} className="px-4 py-2 bg-[#9A0000] text-white border border-[#9A0000] hover:bg-transparent hover:border hover:border-[#9A0000] hover:text-[#9A0000] rounded-full transition">
-                    Register
+                  <a href={lomba.daftar} className="flex-1 text-center px-4 py-2 bg-[#9A0000] text-white border border-[#9A0000] hover:bg-transparent hover:border hover:border-[#9A0000] hover:text-[#9A0000] rounded-full transition">
+                    View Poster
+                  </a>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <a href={lomba.daftar} className="text-center px-4 py-2 bg-[#9A0000] text-white border border-[#9A0000] hover:bg-transparent hover:border hover:border-[#9A0000] hover:text-[#9A0000] rounded-full transition">
+                    Register Competition
                   </a>
                   {lomba.daftar2 ? (
-                    <a href={lomba.daftar2} className="px-4 py-2 bg-[#9A0000] text-white border border-[#9A0000] hover:bg-transparent hover:border hover:border-[#9A0000] hover:text-[#9A0000] rounded-full transition">
-                      Short Essay
+                    <a href={lomba.daftar2} className="text-center px-4 py-2 bg-[#9A0000] text-white border border-[#9A0000] hover:bg-transparent hover:border hover:border-[#9A0000] hover:text-[#9A0000] rounded-full transition">
+                      Register Short Essay
                     </a>
                   ) : (
                     <></>
@@ -244,9 +270,9 @@ function App() {
         <img src={maskot} className="w-72 absolute top-5 right-10 rotate-12 hidden md:block" alt="BMExHMBM Maskot" />
       </div>
 
-      <div className="h-screen flex flex-col items-center justify-center" id="faq" data-aos="fade-up">
+      <div className="flex flex-col items-center justify-center" id="faq" data-aos="fade-up">
         <h1 className="text-3xl font-bold font-serif text-black my-10 text-center">Frequently Asked Question</h1>
-        <div className="max-w-md mx-auto space-y-3 w-full">
+        <div className="mx-auto space-y-3 w-full md:w-8/12">
           {faqs.map((faq, index) => (
             <div key={index} className="bg-[#9A0000] rounded m-5">
               <button onClick={() => toggleAccordion(index)} className="w-full text-left focus:outline-none p-5 text-white">
@@ -256,7 +282,7 @@ function App() {
                 </div>
               </button>
               <div className={`overflow-hidden transition-max-height duration-300 ease-in-out ${openIndex === index ? 'max-h-screen' : 'max-h-0'}`}>
-                <p className="text-white p-5">{faq.answer}</p>
+                <p className="text-white p-5" dangerouslySetInnerHTML={{ __html: faq.answer }}></p>
               </div>
             </div>
           ))}
@@ -319,16 +345,16 @@ function App() {
               Home
             </a>
             <a href="#" className="text-base">
-              About
+              About Event
             </a>
             <a href="#" className="text-base">
               Competition
             </a>
             <a href="#" className="text-base">
-              Timeline
+              Event Timeline
             </a>
             <a href="#" className="text-base">
-              Contact
+              Frequently Asked Question
             </a>
           </div>
         </div>
