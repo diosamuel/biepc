@@ -3,6 +3,8 @@ import { IconArrowRight, IconBallFootball, IconUsers, IconGift, IconAward, IconB
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './index.css';
+import 'react-responsive-modal/styles.css';
+import { Modal } from 'react-responsive-modal';
 import logo from './assets/logo.png';
 import maskot from './assets/maskot.png';
 import AOS from 'aos';
@@ -45,13 +47,14 @@ import Humas_ITERA_Logo from './assets/Logo Medpart/Internal/Humas ITERA Logo.pn
 import PNG_logo_Himarskap from './assets/Logo Medpart/Internal/PNG logo Himarskap.png';
 
 function App() {
-  const cardFront = 'Welcome to GFG.';
-  const cardBack = 'Computer Science Portal.';
-  const [isFlipped, setFlipped] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [currentPoster, setPoster] = useState(false);
 
-  const handleFlip = () => {
-    setFlipped(!isFlipped);
+  const onOpenModal = poster => {
+    setOpen(true);
+    setPoster(poster);
   };
+  const onCloseModal = () => setOpen(false);
   const [count, setCount] = useState(0);
   const items = [
     {
@@ -130,10 +133,6 @@ function App() {
     {
       question: 'Bagaimana mendapatkan informasi terbaru dari event ini?',
       answer: 'Informasi terbaru akan terus diupdate melalui Instagram kami <IconBrandInstagram /> @diesnatalis.bme'
-    },
-    {
-      question: 'Contact Person',
-      answer: 'Informasi terbaru akan terus diupdate melalui Instagram kami <IconBrandInstagram /> @diesnatalis.bme'
     }
   ];
 
@@ -170,23 +169,28 @@ function App() {
         </a>
       </nav>
 
-      <div className="h-screen bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-yellow-500 via-red-600 to-yellow-200 flex flex-col gap-10 justify-center items-center">
+      <div className="h-screen  flex flex-col gap-10 justify-center items-center bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-yellow-500 via-red-600 to-yellow-200 bg-[length:200%_200%] animate-gradient-move">
         <div className="flex flex-col md:flex-row items-center gap-10">
           <div className="text-white space-y-6 text-center md:text-left flex flex-col justify-center items-center md:justify-start md:items-start" data-aos="fade-right">
-            <p>Welcome!</p>
             <h1 className="text-3xl md:text-6xl font-serif font-bold">
               Anniversary Competition of
               <br />
               BME × HMBM 2024
             </h1>
             <h1 className="text-lg md:text-2xl font-serif font-medium">Institut Teknologi Sumatera</h1>
-            <div className="flex gap-2 mt-3">
+            <div className="flex flex-wrap gap-2 mt-3 items-center justify-center">
               <a href="#about" className="bg-[#9A0000] px-5 py-2 rounded font-medium rounded-full text-white">
                 About Us
               </a>
               <a href="#lomba" className="bg-[#9A0000] px-5 py-2 rounded font-medium rounded-full text-white">
                 Competition
               </a>
+              <div className="flex flex-col mt-3 gap-3 text-white">
+                <a href="https://www.instagram.com/diesnatalis.bme/" className="flex gap-1">
+                  {' '}
+                  <IconBrandInstagram /> @diesnatalis.bme
+                </a>
+              </div>
             </div>
           </div>
           <img src={logo} className="w-32 md:w-72 order-first md:order-last animate-pulse" alt="BMExHMBM Logo" data-aos="fade-left" />
@@ -218,7 +222,7 @@ function App() {
         <img src={maskot} className="w-72 absolute left-0 hidden md:block" alt="BMExHMBM Maskot" />
       </div>
 
-      <div className="flex flex-col items-center justify-center bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-red-900 via-red-600 to-red-700 mt-10" id="lomba">
+      <div className="flex flex-col items-center justify-center bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-yellow-500 via-red-600 to-yellow-200 bg-[length:200%_200%] animate-gradient-move mt-10" id="lomba">
         <h1 className="text-3xl md:text-4xl font-bold font-serif text-white text-center my-10">Competition</h1>
         <div className="flex flex-col md:flex-row gap-5 m-6" data-aos="fade-up">
           {items.map((lomba, index) => (
@@ -232,12 +236,15 @@ function App() {
                 </div>
                 {/*<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed commodo est, sed facilisis lacus.</p>*/}
                 <div className="flex flex-wrap gap-2 my-5">
-                  <a href={lomba.guidebook} className="flex-1 px-4 py-2 text-[#9A0000] border border-[#9A0000] hover:bg-transparent hover:border hover:border-[#9A0000] hover:text-[#9A0000] rounded-full transition">
+                  <a href={lomba.guidebook} className="flex-1 text-center px-4 py-2 text-[#9A0000] border border-[#9A0000] hover:bg-transparent hover:border hover:border-[#9A0000] hover:text-[#9A0000] rounded-full transition">
                     GuideBook
                   </a>
-                  <a href={lomba.daftar} className="flex-1 text-center px-4 py-2 bg-[#9A0000] text-white border border-[#9A0000] hover:bg-transparent hover:border hover:border-[#9A0000] hover:text-[#9A0000] rounded-full transition">
+                  <a onClick={() => onOpenModal(lomba.poster)} className="flex-1 text-center px-4 py-2 bg-[#9A0000] text-white border border-[#9A0000] hover:bg-transparent hover:border hover:border-[#9A0000] hover:text-[#9A0000] rounded-full transition">
                     View Poster
                   </a>
+                  <Modal open={open} onClose={onCloseModal} center>
+                    <img src={currentPoster} className="w-80" />
+                  </Modal>
                 </div>
                 <div className="flex flex-col gap-2">
                   <a href={lomba.daftar} className="text-center px-4 py-2 bg-[#9A0000] text-white border border-[#9A0000] hover:bg-transparent hover:border hover:border-[#9A0000] hover:text-[#9A0000] rounded-full transition">
