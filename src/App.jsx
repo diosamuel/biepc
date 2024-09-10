@@ -35,6 +35,7 @@ import logo_slanik from './assets/Logo Medpart/Eksternal/logo slanik.jpg';
 import partnerevent from './assets/Logo Medpart/Eksternal/partnerevent.png';
 import sariroti from './assets/Logo Medpart/Eksternal/sariroti.png';
 import seminarcenter from './assets/Logo Medpart/Eksternal/seminarcenter.png';
+import lirikita from './assets/Logo Medpart/Eksternal/lirikita.jpg';
 
 //internal
 import HMMT_Material_PJ_zia from './assets/Logo Medpart/Internal/HMMT (Material)PJ zia.jpg';
@@ -319,6 +320,7 @@ function App() {
           <img src={partnerevent} className="w-20 md:w-32" alt="partnerevent" />
           <img src={sariroti} className="w-20 md:w-32" alt="sariroti" />
           <img src={seminarcenter} className="w-20 md:w-32" alt="seminarcenter" />
+          <img src={lirikita} className="w-20 md:w-32" alt="lirikita" />
         </div>
       </div>
 
