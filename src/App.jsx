@@ -14,6 +14,7 @@ import debat from './assets/debat.jpg';
 import biepc from './assets/biepc.jpg';
 import futsal from './assets/futsal.jpg';
 import badminton from './assets/badminton.jpg';
+import ranking1 from './assets/ranking1.png';
 
 //medpart
 import acara_mahasiswa from './assets/Logo Medpart/Eksternal/@acara.mahasiswa.png';
@@ -80,7 +81,7 @@ function App() {
       icon: <IconTrophy className="w-10 h-10 text-white" />,
       guidebook: 'https://bit.ly/BookletdanTataTertibBMExHMBM2024',
       daftar: 'https://bit.ly/RegistrasiRanking1BMExHMBM2024',
-      poster: null,
+      poster: ranking1,
       price: 'Rp5.000/Person'
     },
     {
@@ -262,7 +263,7 @@ function App() {
                     </a>
 
                     {lomba.poster && (
-                      <a onClick={() => onOpenModal(lomba.poster)} className="flex-1 text-center px-4 py-2 bg-[#9A0000] text-white hover:bg-transparent hover:text-[#9A0000] rounded-full transition">
+                      <a onClick={() => onOpenModal(lomba.poster)} className="cursor-pointer flex-1 text-center px-4 py-2 bg-[#9A0000] text-white hover:bg-transparent hover:text-[#9A0000] rounded-full transition">
                         View Poster
                       </a>
                     )}
