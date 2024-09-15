@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { IconArrowRight, IconBallFootball, IconUsers, IconGift, IconAward, IconBrandHipchat, IconNotebook, IconBrandInstagram } from '@tabler/icons-react';
+import { IconArrowRight, IconBallFootball, IconUsers, IconGift, IconAward, IconBrandHipchat, IconNotebook, IconBrandInstagram, IconTrophy } from '@tabler/icons-react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './index.css';
@@ -74,6 +74,14 @@ function App() {
       daftar: 'https://forms.gle/rDotF5HEanXFNHp86',
       poster: debat,
       price: 'Rp100.000/Team'
+    },
+    {
+      nama: 'Ranking 1 (Biomedical Engineering ITERA)',
+      icon: <IconTrophy className="w-10 h-10 text-white" />,
+      guidebook: 'https://bit.ly/BookletdanTataTertibBMExHMBM2024',
+      daftar: 'https://bit.ly/RegistrasiRanking1BMExHMBM2024',
+      poster: null,
+      price: 'Rp5.000/Person'
     },
     {
       nama: 'Futsal Competition (Biomedical Engineering ITERA)',
@@ -186,8 +194,8 @@ function App() {
               <a href="#lomba" className="bg-[#9A0000] px-5 py-2 rounded font-medium rounded-full text-white">
                 Competition
               </a>
-              <div className="flex flex-col mt-3 gap-3 text-white">
-                <a href="https://www.instagram.com/diesnatalis.bme/" className="flex gap-1">
+              <div className="flex flex-col justify-center items-center text-white">
+                <a href="https://www.instagram.com/diesnatalis.bme/" className="flex items-center justify-center gap-1">
                   {' '}
                   <IconBrandInstagram /> @diesnatalis.bme
                 </a>
@@ -223,54 +231,75 @@ function App() {
         <img src={maskot} className="w-72 absolute left-0 hidden md:block" alt="BMExHMBM Maskot" />
       </div>
 
-      <div className="flex flex-col items-center justify-center bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-yellow-500 via-red-600 to-yellow-200 bg-[length:200%_200%] animate-gradient-move mt-10" id="lomba">
+      <div
+        className="w-full flex flex-col items-center justify-center bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] 
+  from-yellow-500 via-red-600 to-yellow-200 bg-[length:200%_200%] animate-gradient-move mt-10"
+        id="lomba"
+      >
         <h1 className="text-3xl md:text-4xl font-bold font-serif text-white text-center my-10">Competition</h1>
-        <div className="flex flex-col md:flex-row gap-5 m-6" data-aos="fade-up">
-          {items.map((lomba, index) => (
-            <div key={index} className="bg-white border border-red-300 p-5 rounded hover:shadow transition-all hover:scale-105 flex flex-col justify-between">
-              <div className="p-2 rounded-full bg-[#9A0000] w-fit">{lomba.icon}</div>
-              <div>
-                <h1 className="text-3xl font-bold my-5">{lomba.nama}</h1>
-                <div className="px-4 py-2 bg-yellow-200 rounded">
-                  <p className="text-sm">Register Price</p>
-                  <h1 className="text-2xl font-semibold text-orange-600">{lomba.price}</h1>
-                </div>
-                {/*<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed commodo est, sed facilisis lacus.</p>*/}
-                <div className="flex flex-wrap gap-2 my-5">
-                  <a href={lomba.guidebook} className="flex-1 text-center px-4 py-2 text-[#9A0000] border border-[#9A0000] hover:bg-transparent hover:border hover:border-[#9A0000] hover:text-[#9A0000] rounded-full transition">
-                    GuideBook
-                  </a>
-                  <a onClick={() => onOpenModal(lomba.poster)} className="flex-1 text-center px-4 py-2 bg-[#9A0000] text-white border border-[#9A0000] hover:bg-transparent hover:border hover:border-[#9A0000] hover:text-[#9A0000] rounded-full transition">
-                    View Poster
-                  </a>
-                  <Modal open={open} onClose={onCloseModal} center>
-                    <img src={currentPoster} className="w-80" />
-                  </Modal>
-                </div>
-                <div className="flex flex-col gap-2">
-                  <a href={lomba.daftar} className="text-center px-4 py-2 bg-[#9A0000] text-white border border-[#9A0000] hover:bg-transparent hover:border hover:border-[#9A0000] hover:text-[#9A0000] rounded-full transition">
-                    Register Competition
-                  </a>
-                  {lomba.daftar2 ? (
-                    <a href={lomba.daftar2} className="text-center px-4 py-2 bg-[#9A0000] text-white border border-[#9A0000] hover:bg-transparent hover:border hover:border-[#9A0000] hover:text-[#9A0000] rounded-full transition">
-                      Register Short Essay
+
+        <div className="w-full overflow-x-scroll overflow-y-hidden">
+          <div className="flex flex-col md:flex-row m-5 gap-5" data-aos="fade-up">
+            {items.map((lomba, index) => (
+              <div key={index} className="bg-white border border-red-300 md:w-[25em] p-5 rounded hover:shadow-lg transition-all hover:scale-105 flex-shrink-0 flex flex-col justify-between">
+                {/* Icon */}
+                <div className="p-2 rounded-full bg-[#9A0000] w-fit">{lomba.icon}</div>
+
+                {/* Content */}
+                <div>
+                  <h1 className="text-3xl font-bold my-5">{lomba.nama}</h1>
+
+                  {/* Register Price */}
+                  <div className="px-4 py-2 bg-yellow-200 rounded">
+                    <p className="text-sm">Register Price</p>
+                    <h1 className="text-2xl font-semibold text-orange-600">{lomba.price}</h1>
+                  </div>
+
+                  {/* Buttons */}
+                  <div className="flex flex-wrap gap-2 my-5">
+                    <a href={lomba.guidebook} className="flex-1 text-center px-4 py-2 text-[#9A0000] border border-[#9A0000] hover:bg-transparent hover:text-[#9A0000] rounded-full transition">
+                      GuideBook
                     </a>
-                  ) : (
-                    <></>
+
+                    {lomba.poster && (
+                      <a onClick={() => onOpenModal(lomba.poster)} className="flex-1 text-center px-4 py-2 bg-[#9A0000] text-white hover:bg-transparent hover:text-[#9A0000] rounded-full transition">
+                        View Poster
+                      </a>
+                    )}
+
+                    <Modal open={open} onClose={onCloseModal} center>
+                      <img src={currentPoster} className="w-80" alt="Poster" />
+                    </Modal>
+                  </div>
+
+                  {/* Registration Links */}
+                  <div className="flex flex-col gap-2">
+                    <a href={lomba.daftar} className="text-center px-4 py-2 bg-[#9A0000] text-white hover:bg-transparent hover:text-[#9A0000] rounded-full transition">
+                      Register Competition
+                    </a>
+
+                    {lomba.daftar2 && (
+                      <a href={lomba.daftar2} className="text-center px-4 py-2 bg-[#9A0000] text-white hover:bg-transparent hover:text-[#9A0000] rounded-full transition">
+                        Register Short Essay
+                      </a>
+                    )}
+                  </div>
+                </div>
+
+                {/* Contact Person */}
+                <div>
+                  {lomba.contact && (
+                    <a href={lomba.contact} className="text-sm py-2 px-4 border border-[#9A0000] rounded-full">
+                      Contact Person
+                    </a>
                   )}
                 </div>
               </div>
-              <div>
-                {[].map(tel => (
-                  <a href={lomba.contact} className="text-sm py-2 px-4 border border-[#9A0000] rounded-full">
-                    Contact Person
-                  </a>
-                ))}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
+
       <div className="flex flex-col items-center justify-center gap-5" id="timeline" data-aos="fade-up">
         <img src={maskot} className="w-72 absolute left-10 -rotate-12 hidden md:block" alt="BMExHMBM Maskot" />
         <h1 className="text-3xl font-bold font-serif text-black my-10">Timeline</h1>
@@ -298,8 +327,8 @@ function App() {
         <img src={maskot} className="w-72 absolute top-5 right-10 rotate-12 hidden md:block" alt="BMExHMBM Maskot" />
       </div>
 
-      <div className="h-screen flex flex-col items-center justify-center" data-aos="fade-up">
-        <h1 className="text-3xl font-bold font-serif text-black text-center mb-10">Media Partner & Sponsorship</h1>
+      <div className="flex flex-col items-center justify-center" data-aos="fade-up">
+        <h1 className="text-3xl font-bold font-serif text-black text-center my-10">Media Partner & Sponsorship</h1>
         <div className="flex flex-wrap items-center justify-center gap-5 m-5">
           <img src={acara_mahasiswa} className="w-20 md:w-32" alt="acara mahasiswa" />
           <img src={aradio_official} className="w-20 md:w-32" alt="aradio official" />
@@ -340,7 +369,7 @@ function App() {
           </div>
           <p className="text-white opacity-80 mt-3">Institut Teknologi Sumatera, Jalan Terusan Ryacudu, Desa Way Hui, Kecamatan Jatiagung, Lampung Selatan 35365</p>
           <div className="flex flex-col mt-3 gap-3 text-white">
-            <a href="https://www.instagram.com/diesnatalis.bme/" className="flex gap-2">
+            <a href="https://www.instagram.com/diesnatalis.bme/" target='_blank' className="flex items-center justify-center gap-2">
               {' '}
               <IconBrandInstagram /> @diesnatalis.bme
             </a>
