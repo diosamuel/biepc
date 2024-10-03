@@ -16,19 +16,19 @@ function Qualified() {
           </h1>
         </div>
         <div className="flex gap-10 hidden md:inline-flex">
-          <a href="#" className="text-base">
+          <a href="/#" className="text-base">
             Home
           </a>
-          <a href="#about" className="text-base">
+          <a href="/#about" className="text-base">
             About Event
           </a>
-          <a href="#lomba" className="text-base">
+          <a href="/#lomba" className="text-base">
             Competition
           </a>
-          <a href="#timeline" className="text-base">
+          <a href="/#timeline" className="text-base">
             Timeline
           </a>
-          <a href="#faq" className="text-base">
+          <a href="/#faq" className="text-base">
             FAQ
           </a>
         </div>
