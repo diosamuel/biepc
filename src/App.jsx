@@ -63,8 +63,8 @@ function App() {
       nama: 'Biomedis International Essay and Poster Competition',
       icon: <IconNotebook className="w-10 h-10 text-white" />,
       guidebook: 'https://bit.ly/BIEPCBMExHMBM',
-      daftar: 'https://forms.gle/NKTxSLMPyfo8Yxp19',
-      daftar2: 'https://forms.gle/A2sDKQekQ2giBfAr6',
+      daftar: '/qualified',
+      daftar2: '/qualified',
       poster: biepc,
       price: 'FREE'
     },
@@ -276,12 +276,12 @@ function App() {
                   {/* Registration Links */}
                   <div className="flex flex-col gap-2">
                     <a href={lomba.daftar} className="text-center px-4 py-2 bg-[#9A0000] text-white hover:bg-transparent hover:text-[#9A0000] rounded-full transition">
-                      Register Competition
+                      {lomba.daftar.includes("qualified") ? "Essay Qualified":"Register Competition"}
                     </a>
 
                     {lomba.daftar2 && (
                       <a href={lomba.daftar2} className="text-center px-4 py-2 bg-[#9A0000] text-white hover:bg-transparent hover:text-[#9A0000] rounded-full transition">
-                        Register Short Essay
+                          {lomba.daftar.includes("qualified") ? "Poster Qualified":"Register Competition"}
                       </a>
                     )}
                   </div>
